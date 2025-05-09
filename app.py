@@ -4,7 +4,7 @@ import io
 import zipfile
 
 # Taille cible fixée à 0.9 Mo
-TARGET_SIZE_MB = 0.9
+TARGET_SIZE_MB = 0.95
 TARGET_SIZE_BYTES = TARGET_SIZE_MB * 1024 * 1024
 
 def compress_until_target_size(img):
