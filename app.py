@@ -3,13 +3,13 @@ from PIL import Image
 import io
 import zipfile
 
-# Taille cible fixée à 1 Mo
-TARGET_SIZE_MB = 1.0
+# Taille cible fixée à 0.9 Mo
+TARGET_SIZE_MB = 0.9
 TARGET_SIZE_BYTES = TARGET_SIZE_MB * 1024 * 1024
 
 def compress_until_target_size(img):
     quality = 95  # On démarre avec une meilleure qualité
-    min_quality = 60  # Qualité minimale à atteindre
+    min_quality = 40  # Qualité minimale à atteindre
     step = 5
     
     # Convertir en RGB si l'image est en RGBA
@@ -34,7 +34,7 @@ def compress_until_target_size(img):
     
     return buffer
 
-st.title("📸 Redimensionneur d'images (max 1 Mo)")
+st.title("📸 Redimensionneur d'images")
 
 uploaded_files = st.file_uploader("Chargez des images (JPEG/PNG)", type=["jpg", "jpeg", "png"], accept_multiple_files=True)
 
