@@ -9,7 +9,7 @@ TARGET_SIZE_BYTES = TARGET_SIZE_MB * 1024 * 1024
 
 def compress_until_target_size(img):
     quality = 95  # On démarre avec une meilleure qualité
-    min_quality = 40  # Qualité minimale à atteindre
+    min_quality = 0.5  # Qualité minimale à atteindre
     step = 5
     
     # Convertir en RGB si l'image est en RGBA
